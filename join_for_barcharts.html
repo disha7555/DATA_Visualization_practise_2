@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<script src="http://d3js.Org/d3.v6.min.js">
+		</script>
+	</head>
+	<body>
+		<div>
+			<button onclick="showbar(myData1,1)">Barchart1
+			</button>
+			<button onclick="showbar(myData2,2)">Barchart2
+			</button>
+		</div>
+		<h3></h3>
+		<svg  width=800 height=800>
+		</svg>
+	</body>
+	
+	<script>
+		var myData1=[50,20,40,30,10];
+		var myData2=[33,41,12,26,47];
+		var barcolor=["","orange","gray"];
+		var year=[0,2010,2016];
+		function showbar(myData,j)
+		{
+		d3.select('body').select('h3')
+		.text(year[j])
+		.style('color',barcolor[j]);
+		 d3.select('body').select('svg').selectAll('rect')
+		.data(myData)
+		.join('rect')
+		.attr('x',100)
+		.attr('y',(d,i)=>(i+1)*100)
+		.attr('height',75)
+		.transition()
+		.duration(2300)
+		.attr('width',(d)=>(d*10))
+		.attr('fill','blue');
+		d3.select('body').select('svg')
+		.selectAll('text')
+		.data(myData)
+		.join('text')
+		.attr('x',140)
+		.attr('y',(d,i)=>(i+1)*100+30)
+		.text((d)=>d)
+		.attr('fill',barcolor[j]);
+	
+		}
+	</script>
+</html>

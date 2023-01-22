@@ -1,0 +1,23 @@
+<html>
+	<head>
+	<script src="http://d3js.Org/d3.v6.min.js"></script>
+	</head>
+	<body>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+		<script type="text/javascript">
+		var myData=[10,20];
+		var mydivs=d3.select('body')
+		.selectAll('div')
+	     mydivs.data(myData)
+		.text(function(d){
+							return d;
+						})
+		.exit()
+		.remove();
+		</script> 
+</html>
+					
+		

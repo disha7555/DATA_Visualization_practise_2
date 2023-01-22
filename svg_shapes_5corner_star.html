@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<script src="http://d3js.Org/d3.v6.min.js">
+		</script>
+	</head>
+		<body>
+			<script>
+			var mysvg=d3.select("body")
+					 .append("svg")
+					 .attr("width",300)
+					 .attr("height",300);
+			
+			 mysvg.append("path")
+			.attr("d","M 150 170 L 70 133 L 230 133 Z")
+			.attr("stroke","red")
+			.attr("fill","red")
+			.attr("fill-opacity",0.5);
+			mysvg.append("path")
+			.attr("d","M 150 90 L 115 133 L 185 133 Z")
+			.attr("stroke","red")
+			.attr("fill","red")
+			.attr("fill-opacity",0.5);
+			mysvg.append("line")
+			.attr("x1",115)
+			.attr("y1",133)
+			.attr("x2",104)
+			.attr("y2",148)
+			.attr("stroke","red");
+			mysvg.append("line")
+			.attr("x1",185)
+			.attr("y1",133)
+			.attr("x2",198)
+			.attr("y2",148)
+			.attr("stroke","red");
+			mysvg.append("path")
+			.attr("d","M 85 183 L 150 170 L 104 148 Z")
+			.attr("stroke","red")
+			.attr("fill","red")
+			.attr("fill-opacity",0.5);
+			mysvg.append("path")
+			.attr("d","M 215 183 L 150 170 L 198 148 Z")
+			.attr("stroke","red")
+			.attr("fill","red")
+			.attr("fill-opacity",0.5);
+			
+			</script>
+		</body>
+<html>

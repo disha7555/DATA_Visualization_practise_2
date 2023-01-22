@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<script src="jquery-3.6.0.min.js">
+		</script>
+		<script src="http://code.highcharts.com/highcharts.src.js">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highchartTable/2.0.0/jquery.highchartTable.js">
+		</script>
+	</head>
+	<body>
+		<table id="highchart" data-graph-container-before="1" data-graph-type="column">
+			<thead>
+				<tr>
+					<th>Month</th>
+					<th>Sales</th>
+					<th>Profit</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Jan</td>
+					<td>50000</td>
+					<td>30000</td>
+				</tr>
+				<tr>
+					<td>Feb</td>
+					<td>20000</td>
+					<td>40000</td>
+				</tr>
+				<tr>
+					<td>Mar</td>
+					<td>10000</td>
+					<td>50000</td>
+				</tr>
+				<tr>
+					<td>Apr</td>
+					<td>60000</td>
+					<td>20000</td>
+				</tr>
+			</tbody>
+		
+		</table>
+		<script>
+			$('#highchart').highchartTable();
+		</script>
+	<body>
+</html>
+		
+		

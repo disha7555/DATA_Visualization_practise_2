@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<script src="jquery-3.6.0.min.js">
+		</script>
+	</head>
+	<body>
+		<table border=1>
+			<tr>
+				<th>No</th>
+				<th>Name</th>
+				<th>Q1 salary</th>
+				<th>Q2 salary</th>
+				<th>total Q salary</th>
+			</tr>
+			<tr class="row">
+				<td>1</td>
+				<td>Anil</td>
+				<td class="ema_sal">10000</td>
+				<td class="ema_sal1">12000</td>
+				<td class="row_t"></td>
+			</tr>
+			<tr class="row">
+				<td>2</td>
+				<td>Sunita</td>
+				<td class="ema_sal">12000</td>
+				<td class="ema_sal1">12000</td>
+				<td class="row_t"></td>
+			</tr>
+			<tr class="row">
+				<td>3</td>
+				<td>Meera</td>
+				<td class="ema_sal">29000</td>
+				<td class="ema_sal1">29500</td>
+				<td class="row_t"></td>
+			</tr>
+			<tr class="row">
+				<td>4</td>
+				<td>Amit</td>
+				<td class="ema_sal">15000</td>
+				<td class="ema_sal1">18000</td>
+				<td class="row_t"></td>
+			</tr>
+			<tr class="row">
+				<td>5</td>
+				<td>John</td>
+				<td class="ema_sal">32000</td>
+				<td class="ema_sal1">20000</td>
+				<td class="row_t"></td>
+			</tr>
+			<tr>
+				<td>total salary</td>
+				<td></td>
+				<td id="sum_sal_Q1"></td>
+				<td id="sum_sal_Q2"></td>
+				<td id="sum_sal_Q"></td>
+			</tr>
+		</table>
+	</body>
+	<script>
+	$(function()
+		{
+			var total_Q1_sal=0;
+			$(".ema_sal").each(function()
+									{
+										total_Q1_sal=total_Q1_sal+parseFloat($(this).html());
+									}
+								);
+			$('#sum_sal_Q1').html(total_Q1_sal);
+		
+	
+			var total_Q2_sal=0;
+			$(".ema_sal1").each(function()
+									{
+										total_Q2_sal=total_Q2_sal+parseFloat($(this).html());
+									}
+								);
+			$('#sum_sal_Q2').html(total_Q2_sal);
+			
+			var total_row=0;
+			$(".row").each(function(){
+								total_row=parseFloat($(this).find(".ema_sal").html())+parseFloat($(this).find(".ema_sal1").html());
+								console.log(total_row);
+								$(this).find(".row_t").html(total_row);
+			});
+			var total_Q_sal=0;
+			$(".row_t").each(function()
+									{
+										total_Q_sal=total_Q_sal+parseFloat($(this).html());
+									}
+								);
+			$('#sum_sal_Q').html(total_Q_sal);
+		
+		}
+		);
+	
+	</script>
+</html>

@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>json1</title>
+			<script src="jquery-3.6.0.min.js">
+			</script>
+	</head>
+	<body>
+		<script>
+			$.getJSON("http://127.0.0.1:8887//json1.json",
+			function(theData)
+			{
+			$.each(theData.sales,function(i,j)
+			{
+			document.write("Name of region: "+j.region+"</br>");
+			document.write("No of emp: "+j.emp+"</br>");
+			document.write("Amount of sales: "+j.amount+"</br>");
+			})
+			});
+		</script>
+	</body>
+</html>

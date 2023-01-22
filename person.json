@@ -1,0 +1,9 @@
+{
+	"person":[
+			{"name":"Anil","age":28,"email":"anil@gmail.com"},
+			{"name":"Geeta","age":32,"email":"geeta@gmail.com"},
+			{"name":"Suman","age":30,"email":"suman@gmail.com"},
+			{"name":"Manji","age":29,"email":"manji@gmail.com"},
+			{"name":"Jeet","age":50,"email":"jeet@gmail.com"}
+		 ]
+}

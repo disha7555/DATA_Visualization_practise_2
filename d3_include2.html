@@ -1,0 +1,20 @@
+<html>	
+	<head>
+		<script   src="http://d3js.Org/d3.v6.min.js">
+		</script>
+	</head>
+	<body>
+		<script>
+			var emp=[
+			{name:'John',Salary:9000},
+			{name:'David',Salary:7500},
+			{name:'Ana',Salary:8000}];
+			console.log(emp);
+			console.table(emp);
+			var a2=emp.filter(function(e){
+			return e.Salary>7900;
+			});
+			console.table(a2);
+		</script>
+	</body>
+</html>

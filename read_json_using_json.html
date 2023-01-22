@@ -1,0 +1,25 @@
+<html>
+	<head>
+	<script src="http://d3js.org/d3.v6.min.js">
+	</script>
+	</head>
+	<body>
+		<script>
+		d3.json("http://127.0.0.1:8887/person.json").then(function(data){
+		console.log(data.person.length);
+		for(i=0;i<data.length;i++)
+		{
+		document.write("name: "+data.person[i].name+'</br>');
+		document.write("age: "+data.person[i].age+'</br>');
+		document.write("email: "+data.person[i].email);
+		}
+		var a2=data.person.filter(function(e){
+			return e.age>30;
+			});
+			console.table(a2);
+		console.table(data.person);
+		});
+		</script>
+	</body>
+</html>
+<!--name is wrong-->

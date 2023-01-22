@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+ </head>
+ <body>
+<svg width=900 height=900> </svg>
+<script>
+var myData =[{Name: "Asia", Population: 20},
+{Name: "Europe", Population: 30},
+{Name: "USA", Population: 40},
+{Name: "Africa", Population: 50}
+];
+const chart = d3.select("svg").append('g').attr('transform', 'translate(30,10)');
+const xScale = d3.scaleLinear()
+.range([0,500])
+.domain([0,50]);
+const yScale = d3.scaleBand()
+.range([250,0])
+.domain(myData.map((s) => s.Name));
+chart.append('g').attr('transform', 'translate(0,50)').call(d3.axisLeft(yScale));
+chart.append('g').attr('transform', 'translate(0,300)')
+.call(d3.axisBottom(xScale));
+d3.select("svg")
+ .selectAll("rect")
+ .data(myData)
+ .enter()
+ .append("rect")
+ .attr("fill","red")
+ .attr("height",50)
+ .attr("x",40)
+ .attr("y",function(data,i){return i*60+65;})
+ .transition()
+ .duration(4000)
+ .attr("width",function(data){return data.Population*10;});
+</script>
+ </body>
+ </html>

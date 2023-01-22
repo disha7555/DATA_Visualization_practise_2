@@ -1,0 +1,24 @@
+<html>
+	<head>
+	<script src="http://d3js.Org/d3.v6.min.js"></script>
+	</head>
+	<body>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+		<script type="text/javascript">
+		var myData=[10,20,30,40,50];
+		var mydiv=d3.select('body')
+		.selectAll('div');
+		mydiv.data(myData)
+		.enter()
+		.append('div')
+		.merge(mydiv)
+		.text(function(d){
+							return d;
+						});
+		</script> 
+</html>
+					
+		

@@ -1,0 +1,59 @@
+<name of program:!--filtering shapes-->
+<html>
+		<head>
+		<script src="http://d3js.Org/d3.v6.min.js">
+		</script>
+		</head>
+		<body>
+			<script>
+			var mysvg=d3.select("body")
+					 .append("svg")
+					 .attr("width",7000)
+					 .attr("height",7000);
+			var gtag=mysvg.append("g");
+			gtag.append("rect")
+			.attr("x",0)
+			.attr("y",0)
+			.attr("width",100)
+			.attr("height",50)
+			.attr('transform','translate(200,200) rotate(0)');
+			
+			gtag.append("rect")
+			.attr("x",0)
+			.attr("y",0)
+			.attr("width",100)
+			.attr("height",50)
+			.attr('transform','translate(200,200) rotate(10)');
+		
+			gtag.append("rect")
+			.attr("x",0)
+			.attr("y",0)
+			.attr("width",100)
+			.attr("height",50)
+			.attr('transform','translate(200,200) rotate(20)');
+		
+		gtag.append("rect")
+			.attr("x",0)
+			.attr("y",0)
+			.attr("width",100)
+			.attr("height",50)
+			.attr('transform','translate(200,200) rotate(30)');
+		
+		gtag.append("rect")
+			.attr("x",0)
+			.attr("y",0)
+			.attr("width",100)
+			.attr("height",50)
+			.attr('transform','translate(200,200) rotate(40)');
+		
+		gtag.selectAll('rect')
+		.filter(':nth-child(even)')
+		.attr("fill",'yellow');
+		
+		gtag.selectAll('rect')
+		.filter(':nth-child(odd)')
+		.attr("fill",'green');
+			</script>
+		</body>
+</html>
+			

@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<script src="http://d3js.Org/d3.v6.min.js">
+		</script>
+	</head>
+	<body>
+		<div>
+			<button onclick="showbar(myData1,1)">Barchart1
+			</button>
+			<button onclick="showbar(myData2,2)">Barchart2
+			</button>
+			<button onclick="showbar(myData3,3)">Barchart3
+			</button>
+			<button onclick="showbar(myData4,4)">Barchart4
+			</button>
+				<button onclick="playall()">playall
+			</button>
+				<button onclick="pause()">pause
+			</button>
+		</div>
+		<h3></h3>
+		<svg  width=800 height=800>
+		</svg>
+	</body>
+	
+	<script>
+		var myData1=[50,20,40,30,10];
+		var myData2=[33,41,12,26,47];
+		var myData3=[53,20,40,60,10];
+		var myData4=[10,26,40,30,12];
+		var barcolor=["","orange","gray","green","yellow"];
+		var year=[0,2012,2016,2018,2020];
+		function showbar(myData,j)
+		{
+		
+		d3.select('body').select('svg').selectAll('rect')
+		.data(myData)
+		.join('rect')
+		.attr('x',100)
+		.attr('y',(d,i)=>(i+1)*100)
+		.attr('height',75)
+		.transition()
+		.duration(2300)
+		.attr('width',(d)=>(d*10))
+		.attr('fill','blue');
+		d3.select('body').select('svg')
+		.selectAll('text')
+		.data(myData)
+		.join('text')
+		.attr('x',140)
+		.attr('y',(d,i)=>(i+1)*100+30)
+		.text((d)=>d)
+		.attr('fill','red');
+		d3.select('body').select('h3')
+		.text(year[j])
+		.style('color',barcolor[j]);
+	
+		}
+		var t1,t2,t3,t4;
+		function playall()
+		{ 
+			t1=setTimeout(showbar,3000,myData1,1);
+			t2=setTimeout(showbar,6000,myData2,2);
+			t3=setTimeout(showbar,9000,myData3,3);
+			t4=setTimeout(showbar,11000,myData4,4);	
+		}
+		function pause()
+		{
+		
+		  clearInterval(t1);
+		  clearInterval(t2);
+		  clearInterval(t3);
+		  clearInterval(t4);
+		  }
+	</script>
+	
+</html>

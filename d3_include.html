@@ -1,0 +1,21 @@
+<html>
+	<body>
+		<script>
+			var arr=['A','B','C','D','E','F','G'];
+			var a1=['B','C','G','X'];
+			document.write(arr+'</br>');
+			document.write(a1+'</br>');
+			document.write("elements only in first array:"+'</br>');
+			var a2=arr.filter(function(e){
+			return !a1.includes(e);
+			});
+			document.write(a2+'</br>');
+			var a3=arr.filter(function(e1){
+			return a1.includes(e1);
+			});
+			document.write("element common in both arrays:"+'</br>'+a3);
+		</script>
+	</body>
+</html>
+			
+			

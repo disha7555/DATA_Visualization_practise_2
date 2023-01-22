@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<script src="http://d3js.Org/d3.v6.min.js">
+		</script>
+	</head>
+	<body>
+		<div>Hello world </div>
+		<div id="SecondDiv">How are you</div>
+		<div class="myclass">D3 Examples</div>
+	</body>
+	<script>
+		d3.selectAll('Div').style('background','yellow')
+		.attr('id','firstDiv')
+		.style('color','Red')
+		.text(' welcome')
+		.append('b')
+		.text(' hello');
+	</script>
+</html>

@@ -1,0 +1,66 @@
+<html>
+	<head>
+	<script src="jquery-3.6.0.min.js"></script>
+	<script src="http://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+	<link href="http://cdn.datatables.net/1.10.21/css/jquery.dataTables.css" rel="stylesheet"/>
+
+	<script>
+	$(function()
+	{
+		$("#salesByRegion").dataTable(
+		{ordering:true,
+		paging:true,
+		info:true,
+		order:[[1,"dece"]]
+		}
+		);
+	}
+	);
+	</script>
+	</head>
+	<body>
+		<table id="salesByRegion" class="stripe"> 
+		<thead>
+		<tr>
+			<th>Region</th>
+			<th>Sales</th>
+			<th>Mean</th>
+		</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>North</th>
+      			<td>10000</td>
+				<td>150</td>
+			</tr>
+            <tr>
+				<th>South</th>
+      			<td>30000</td>
+				<td>160</td>
+			</tr>
+			<tr>
+				<th>East</th>
+      			<td>12500</td>
+				<td>142</td>
+			</tr>
+			<tr>
+				<th>West</th>
+      			<td>35000</td>
+				<td>250</td>
+			</tr>
+			<tr>
+				<th>SouthWest</th>
+      			<td>25000</td>
+				<td>300</td>
+			</tr>
+			
+			</tbody>
+			<tfoot>
+			<tr>
+			<th>SUM</th>
+			<td>112500</td>
+			</tr>
+			</tfoot>
+		</table>
+	</body>
+</html>

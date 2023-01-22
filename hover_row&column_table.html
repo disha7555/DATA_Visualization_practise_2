@@ -1,0 +1,106 @@
+<html>
+	<head>
+		<title>table</title>
+		<style type="text/css">
+		.current-row{
+		background:red;
+		}
+		.current-col{
+		background:red;
+		}
+         thead tr th{
+		background-color:red;
+		}
+		tbody tr th{
+		background-color:blue;
+		}
+		tbody tr td{
+		background-color:green;
+		}
+		tfoot tr th{
+		background-color:yellow;
+		}
+		tfoot tr td{
+		background-color:gray;
+		}
+		
+		</style>
+		<script src="jquery-3.6.0.min.js">
+		</script>
+	</head>
+	<body>
+	<script>
+		$(document).ready(
+							function()
+							{
+								$(".table-row").hover(
+							function()
+							{
+								$(this).find('th,td').addClass("current-row");
+							},
+							function()
+							{
+							    $(this).find('th,td').removeClass("current-row");
+							}
+							),
+						    $('th,td').hover(
+						    function()
+								{
+								var i=$(this).index();
+								$('th,td').filter(':nth-child('+(i+1)+')').addClass('current-col');
+								},
+							function()
+								{
+								var i=$(this).index();
+								$('th,td').filter(':nth-child('+(i+1)+')').removeClass('current-col');
+								}
+								);
+		}
+		);
+	</script>
+		<table border=2>
+		<thead>
+			<tr class="table-row">
+				<th>Region</th>
+				<th>Sales</th>
+				<th>Mean</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="table-row">
+				<th>North</th>
+      			<td>10000</td>
+				<td>150</td>
+			</tr>
+            <tr class="table-row">
+				<th>South</th>
+      			<td>30000</td>
+				<td>160</td>
+			</tr>
+			<tr class="table-row">
+				<th>East</th>
+      			<td>12500</td>
+				<td>142</td>
+			</tr>
+			<tr class="table-row">
+				<th>West</th>
+      			<td>35000</td>
+				<td>250</td>
+			</tr>
+			<tr class="table-row">
+				<th>SouthWest</th>
+      			<td>25000</td>
+				<td>300</td>
+			</tr>
+			
+			</tbody>
+			<tfoot>
+			<tr class="table-row">
+			<th>SUM</th>
+			<td>112500</td>
+			</tr>
+			</tfoot>
+			
+		</table>
+	</body>
+</html>

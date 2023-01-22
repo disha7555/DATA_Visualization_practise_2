@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script src="http://d3js.Org/d3.v6.min.js">
+		</script>
+	</head>
+	<body>
+		<p>
+		<p>
+		<p>
+		<p>
+		<p>
+	</body>
+	<script>
+		var arr=[20,38,15,25,60];
+		d3.selectAll('p')
+		.data(arr)
+		.text(function(d,i)
+		{
+		return "element: "+d;
+		}
+		);
+	</script>
+</html>

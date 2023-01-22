@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<script src="http://d3js.Org/d3.v6.min.js">
+		</script>
+	</head>
+		<body>
+			<script>
+			var mysvg=d3.select("body")
+					 .append("svg")
+					 .attr("width",300)
+					 .attr("height",300);
+			mysvg.append("path")
+			.attr("d","M 150 0 L 50 200 L 250 200 Z")
+			.attr("stroke","red")
+			.attr("fill","orange")
+			.attr("fill-opacity",0.5);
+			
+			 mysvg.append("path")
+			.attr("d","M 150 260 L 55 60 L 255 60 Z")
+			.attr("stroke","red")
+			.attr("fill","red")
+			.attr("fill-opacity",0.5);
+			/* mysvg.append("path")
+			.attr("d","M 150 260 L 65 70 L 245 70 Z")
+			.attr("stroke","red")
+			.attr("fill","red")
+			.attr("fill-opacity",0.5);*/
+			</script>
+		</body>
+<html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+ <script src="https://d3js.org/d3.v6.min.js"></script>
+<style type="text/css">
+.high{
+fill:orange;
+}
+</style>
+</head>
+<body>
+<svg height=1000 width=1000>
+<circle> </circle>
+<circle> </circle>
+<circle> </circle>
+<circle> </circle>
+</svg>
+<script>
+var myData=[ {Name: "Asia", Population: 9600000},
+{Name: "Europe", Population: 8400000},
+{Name: "USA", Population: 5200000},
+{Name: "Africa", Population: 2100000} ];
+var s= d3.selectAll("circle");
+s.data(myData);
+s.attr("r",function(d){return d.Population/200000;})
+.attr("cy",100)
+.attr("cx",function(d,i){return (i+1)*100;})
+//.classed("high",function(d){return d>=40;})
+.attr("class",function(d){if(d>=40) return "high"})
+</script>
+</body>
+</html>

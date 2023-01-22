@@ -1,0 +1,24 @@
+<html>
+	<head>
+	<script src="https://d3js.org/d3.v3.min.js">
+	</script>
+	</head>
+	<body>
+		<script>
+		d3.csv("http://127.0.0.1:8887/person.csv").then(function(data){
+		//console.log(data.length);
+		for(i=0;i<data.length;i++)
+		{
+		document.write("name: "+data[i].name+'</br>');
+		document.write("age: "+data[i].age+'</br>');
+		document.write("email: "+data[i].email);
+		}
+		var a2=data.filter(function(e){
+			return e.age>30;
+			});
+			console.table(a2);
+		console.table(data);
+		});
+		</script>
+	</body>
+</html>

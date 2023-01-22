@@ -1,0 +1,38 @@
+<html>
+ <head>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+ </head>
+ <body>
+<button onclick="showBar(data1,'red')">Data Series-1</button>
+<button onclick="showBar(data2,'green')">Data Series-2</button>
+<div></div>
+<script>
+var myArea = d3.select("div")
+ .append("svg")
+ .attr("width",700)
+ .attr("height",700);
+var data1 = [10,50,30,40,20];
+var data2 = [70,40,10,30,60];
+function showBar(d, col)
+{
+myArea.selectAll('rect').remove();
+myArea.selectAll('text').remove();
+var bar = myArea.selectAll('rect').data(d);
+var bartext = myArea.selectAll('text').data(d);
+bar.enter()
+.append('rect')
+.attr("x",10)
+.attr("y",function(d,i){return (i+1)*70;})
+.attr("height",50)
+.attr("width",function(d){return d*10;})
+.style("fill", col);
+bartext.enter()
+.append('text')
+.attr("x",15)
+.attr("y",function(d,i){return (i+1)*80;})
+.text(function(d){return d;})
+.style("stroke","white");
+}
+</script>
+ </body>
+</html>

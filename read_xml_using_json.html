@@ -1,0 +1,28 @@
+
+<html>
+	<head>
+	<script src="http://d3js.org/d3.v6.min.js">
+	</script>
+	</head>
+	<body>
+		<script>
+		d3.xml("http://127.0.0.1:8887/person.xml").then(function(data){
+		var personData=data.documentElement.getElementsByTagName('person');
+		console.log(personData.length);
+		for(i=0;i<personData.length;i++)
+		{
+		document.write("<br/>person "+i+":"+personData[i].textContent);
+		}
+		
+		console.table(personData);
+		
+		var nameData=data.documentElement.getElementsByTagName('name');
+		console.log(nameData.length);
+		for(i=0;i<nameData.length;i++)
+		{
+		document.write("<br/>name "+i+":"+nameData[i].textContent);
+		}
+		});
+		</script>
+	</body>
+</html>

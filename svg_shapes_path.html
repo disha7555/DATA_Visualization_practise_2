@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<script src="http://d3js.Org/d3.v6.min.js">
+		</script>
+	</head>
+		<body>
+			<script>
+			var mysvg=d3.select("body")
+					 .append("svg")
+					 .attr("width",300)
+					 .attr("height",300);
+			mysvg.append("path")
+			.attr("d","M 150 0 L 75 200 L 225 200 Z")
+			.attr("stroke","red")
+			.attr("fill","orange");
+			</script>
+		</body>
+<html>

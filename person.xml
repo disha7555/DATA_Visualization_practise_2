@@ -1,0 +1,27 @@
+<persons>
+	<person>
+		<name>Anil</name>
+		<age>28</age>
+		<email>anil@gmail.com</email>
+	</person>
+	<person>
+		<name>Geeta</name>
+		<age>32</age>
+		<email>geeta@gmail.com</email>
+	</person>
+	<person>
+		<name>Suaman</name>
+		<age>30</age>
+		<email>suman@gmail.com</email>
+	</person>
+	<person>
+		<name>Manji</name>
+		<age>29</age>
+		<email>manji@gmail.com</email>
+	</person>
+	<person>
+		<name>Jeet</name>
+		<age>50</age>
+		<email>jeet@gmail.com</email>
+	</person>
+</persons>

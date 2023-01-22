@@ -1,0 +1,23 @@
+<html>
+		<head>
+		<script src="http://d3js.Org/d3.v6.min.js">
+		</script>
+		</head>
+		<body>
+			<script>
+			var mysvg=d3.select('body').append('div')
+					.text('hello')
+					.transition()
+					.delay(2000)
+					.duration(5000)
+					.style('font-size','50px')
+					.style('color','pink');
+			d3.select("body")
+					 .append("svg")
+					 .attr("width",7000)
+					 .attr("height",7000);
+			
+					
+			</script>
+		</body>
+	</html>

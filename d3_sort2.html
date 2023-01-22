@@ -1,0 +1,19 @@
+<html>	
+<head>
+	<script src="http://d3js.org/d3.v6.min.js">
+	</script>
+	</head>
+	<body>
+		<script>
+			var emp=[
+			{name:'John',Salary:9000},
+			{name:'David',Salary:7500},
+			{name:'Ana',Salary:8000}];
+			console.log(emp);
+			console.table(emp);
+			var e=emp.sort((a,b)=>a.Salary-b.Salary);
+           var e1=emp.sort((a,b)=>d3.ascending(a.name,b.name));
+			console.table(e);
+		</script>
+	</body>
+</html>

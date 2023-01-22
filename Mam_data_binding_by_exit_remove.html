@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+ <head>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+ </head>
+ <body>
+<p> </p>
+<p> </p>
+<p> </p>
+<script>
+var d = ["Hello"];
+var s = d3.selectAll("p");
+s.data(d).text(function(data,i){return data;})
+.exit().remove();
+</script>
+ </body>
+</html>

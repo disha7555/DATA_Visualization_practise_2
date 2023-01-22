@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+ </head>
+ <body>
+<svg width=900 height=900> </svg>
+<script>
+var myData = [50,20,30,40,10] ;
+d3.select("svg").selectAll("rect")
+ .data(myData)
+ .enter()
+ .append("rect")
+ .attr("fill","red")
+ .attr("height",50)
+ 
+ .attr("x",10)
+ 
+ .attr("y",function(data,i){return i*60+50;})
+ .transition().duration(4000).delay(5000)
+ 
+ .attr("width",function(data){return data*10;});
+ 
+</script>
+ </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script src="http://d3js.Org/d3.v6.min.js">
+		</script>
+	</head>
+	<body>
+		<svg height=800 width=800>
+		</svg>
+	</body>
+	<script>
+		var myData=[30,50,20,40,10];
+		d3.select('body').select('svg').selectAll('circle')
+		.data(myData)
+		.join('rect')
+		.attr('x',100)
+		.attr('y',(d,i)=>(i+1)*100)
+		.attr('height',75)
+		.transition()
+		.duration(2300)
+		.attr('width',(d)=>(d*10))
+		.attr('fill','red');
+		d3.select('body').select('svg')
+		.selectAll('text')
+		.data(myData)
+		.join('text')
+		.attr('x',140)
+		.attr('y',(d,i)=>(i+1)*100+30)
+		.text((d)=>d)
+		.attr('fill','white');
+	</script>
+</html>
+		

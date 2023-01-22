@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>jsonprog</title>
+	</head>
+	<body>
+		<script>
+			var jsonObj={"sales":[
+									{"region":"east","emp":150,"amount":10000},
+									{"region":"west","emp":200,"amount":50000}
+				  				 ]
+						};
+			for(i=0;i<jsonObj.sales.length;i++)
+			{
+			document.write("Name of region: "+jsonObj.sales[i].region+"</br>");
+			document.write("No of emp: "+jsonObj.sales[i].emp+"</br>");
+            document.write("Amount of sales: "+jsonObj.sales[i].amount+"</br>");			
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script src="http://d3js.Org/d3.v6.min.js">
+		</script>
+	</head>
+	<body>
+		<div class="helloclass">Hello world </div>
+		<div id="SecondDiv">How are you</div>
+		<div class="myclass">D3 Examples</div>
+	</body>
+	<script>
+		d3.select('Div').style('background','yellow')
+		.attr('id','firstDiv')
+		.style('color','Red')
+		.text(' welcome')
+		.append('b');
+		d3.select('Div').attr('class','myclass');
+		d3.select('div').classed("myclass",true);
+		d3.select('Div').attr('class','');
+		d3.select('div').classed("myclass",false);
+ </script>
+</html>

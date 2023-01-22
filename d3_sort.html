@@ -1,0 +1,18 @@
+<html>	
+	<head>
+	</head>   
+	<body>
+		<script>
+			var emp=[
+				{name:'John',Salary:9000},
+				{name:'David',Salary:7500},
+				{name:'Ana',Salary:8000}];
+			console.log(emp);
+			console.table(emp);
+			var e=emp.sort(function(a,b){
+			return a.Salary-b.Salary
+			});
+			console.table(e);
+		</script>
+	</body>
+</html>

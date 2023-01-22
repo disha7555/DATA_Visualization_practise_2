@@ -1,0 +1,86 @@
+<!--name of program:!--filtering shapes-->
+<!--see color_shapes_new instead of this program-->
+<html>
+		<head>
+		<script src="http://d3js.Org/d3.v6.min.js">
+		</script>
+		</head>
+		<body>
+			<script>
+			
+			var mysvg=d3.select("body")
+					 .append("svg")
+					 .attr("width",7000)
+					 .attr("height",7000);
+			var gtag=mysvg.append("g");
+					 function fun1()
+			{
+			
+		
+		gtag.append("rect")
+			.attr("x",0)
+			.attr("y",0)
+			.attr("width",100)
+			.attr("height",50)
+			.attr("transform","translate(200,200) rotate(40)")
+			.attr("fill","red");
+			}
+			
+			//var mysvg=d3.select("body")
+					// .append("svg")
+					// .attr("width",7000)
+					// .attr("height",7000);
+					 function fun2()
+			{
+			//var gtag=mysvg.append("g");
+		
+		gtag.append("rect")
+			.attr("x",0)
+			.attr("y",0)
+			.attr("width",100)
+			.attr("height",50)
+			.attr("transform","translate(200,200) rotate(40)")
+			.attr("fill","blue");
+			}
+		
+			</script>
+	
+		<button type="button" name="red" onclick="fun1()/>
+		<button type="button" name="blue" onclick="fun2()/>
+		
+		</body>
+</html>
+			<!--<name of program:!--filtering shapes-->
+<<html>
+		<head>
+		<script src="http://d3js.Org/d3.v6.min.js">
+		</script>
+		</head>
+		<body>
+			<script>
+			var mysvg=d3.select("body")
+					 .append("svg")
+					 .attr("width",7000)
+					 .attr("height",7000);
+			var gtag=mysvg.append("g");
+			gtag.append("rect")
+			.attr("x",0)
+			.attr("y",0)
+			.attr("width",100)
+			.attr("height",50);
+			
+		function fun()
+		{
+		gtag.selectAll('rect')
+		.attr("fill",'red');
+		}
+		function fun1()
+		{
+		gtag.selectAll('rect')
+		.attr("fill",'blue');
+		}
+			</script>
+		<input type="button" name="red" value="red" onclick="fun()"/>
+		<input type="button" name="blue" value="blue" onclick="fun1()"/>
+		</body>
+</html>
